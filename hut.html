@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hut.css">
+    <title>La cabane</title>
+</head>
+<body>
+    <div class="text-container">
+        <h1>La cabane du magicien</h1>
+        <p>Un gros chaudron bout dans le milieu de la pièce.</p>
+        <p>Tu retrouves des ingrédients.</p>
+        <p>Peux-tu concocter une potion en utilisant les bons ingrédients?</p>
+        <blockquote>"Pour concocter cette mixture rare, Trouve ce que mon âme ne veut supporter. Dans ce chaudron, dépose avec soin, Ce que je fuis, ce que je rejette loin."</blockquote>
+    </div>
+
+    <form id="potion-form" class="potion-form">
+        <div class="ingredient-container" id="ingredient-container">
+            <label for="ingredient1" class="ingredient-label">
+                <img src="ingredient-moules.png" alt="moules" class="ingredient-image">
+                Moules
+                <input type="checkbox" id="ingredient1" name="ingredient" value="moules">
+            </label>
+
+            <label for="ingredient2" class="ingredient-label">
+                <img src="ingredient-champignon.png" alt="champignon" class="ingredient-image"> 
+                Champignons
+                <input type="checkbox" id="ingredient2" name="ingredient" value="champignon">
+            </label>
+            <label for="ingredient3" class="ingredient-label">
+                <img src="ingredient-tofu.png" alt="tofu" class="ingredient-image"> 
+                Tofu
+                <input type="checkbox" id="ingredient3" name="ingredient" value="tofu">
+            </label>
+            <label for="ingredient4" class="ingredient-label">
+                <img src="ingredient-oignon.png" alt="oignon" class="ingredient-image"> 
+                Oignons
+                <input type="checkbox" id="ingredient4" name="ingredient" value="oignon">
+            </label>      
+
+
+        </div>
+        <button type="submit" id="potionButton">Concocter la Potion</button>
+    <a href="path1_continue.html" class="return-btn" id="returnButton">Retourner à la forêt</a>
+    <p id="result"></p>
+</form>
+
+    <img src="hut-potion.png" alt="Potion" class="potion-image" id="potion-image" style="display: none;">
+
+    <script>
+document.getElementById('potion-form').onsubmit = function(event) {
+    event.preventDefault();
+
+    var champignonSelected = document.getElementById('ingredient2').checked;
+    var tofuSelected = document.getElementById('ingredient3').checked;
+
+    // Hide ingredients after any attempt to concoct the potion
+    document.getElementById('ingredient-container').style.display = 'none';
+
+    var resultText = '';
+    var potionButton = document.getElementById('potionButton');
+    var returnButton = document.getElementById('returnButton');
+    
+    if (champignonSelected && tofuSelected) {
+        resultText = 'Bravo! Tu as réussi à concocter un mega-elixir!';
+        document.getElementById('potion-image').style.display = 'block'; // Show potion image
+        potionButton.style.display = 'none'; // Hide the concoct button
+        returnButton.style.display = 'inline-block'; // Show the return button
+        returnButton.textContent = 'Retourner à la forêt'; // Change button text if needed
+        returnButton.href = 'path1_continue.html'; // Set the correct href attribute
+    } else {
+        window.location.href = 'hut-end.html'; // Redirect to the game over page
+    }
+    
+    document.getElementById('result').textContent = resultText;
+    document.getElementById('result').style.display = 'block'; // Show result text
+};
+</script>
+</body>
+</html>

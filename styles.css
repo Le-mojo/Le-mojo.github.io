@@ -1,0 +1,62 @@
+body {
+    background: url('parchment.jpg') no-repeat center center fixed;  
+    background-size: cover;
+    font-family: 'Dancing Script', cursive;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container {
+    background: rgba(255, 255, 240, 0.8);
+    border: 1px solid #c0a16b;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c0a16b;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Add more space above the button */
+}
+
+.btn:hover {
+    background-color: #9a7b4f;
+}
+
+.scroll-box {
+    background: url('old-paper.jpg') no-repeat center center;
+    background-size: cover;
+    border: 1px solid #c0a16b;
+    padding: 10px 20px; /* Reduced padding-top and padding-bottom */
+    margin-bottom: 30px;
+    border-radius: 50px / 10px; /* Large horizontal radius and small vertical radius */
+    display: inline-block; /* This makes the div only as wide as its content */
+    text-align: center;
+    width: 90%; /* Adjust to desired width */
+    margin: auto; /* This will center the box */
+    position: relative; /* This allows absolute positioning inside */
+}
+

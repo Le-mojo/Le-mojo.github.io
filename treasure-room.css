@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('treasure-room.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Add padding around the content */
+}
+
+.text-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px; /* Add some space at the top */
+}
+
+.exit-button-container {
+    margin-bottom: 50px; /* Add some space at the bottom */
+}
+
+.exit-button {
+    background-color: #f0e68c; /* Gold color for the button */
+    color: #000; /* Black text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.exit-button:hover {
+    background-color: #ffd700; /* Lighter gold color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game-over.css">
+    <title>Chasm End</title>
+</head>
+<body>
+    <div class="gameover-container">
+        <img src="game-over.jpg" alt="Game Over" class="gameover-image">
+
+        <p class="death-message">Oh non, tu es mort!</p>
+
+        <div class="options-container">
+            <a href="chasm.html" class="option-button">Reprendre d'où j'étais</a>
+            <a href="start.html" class="option-button">Reprendre du début</a>
+        </div>
+    </div>
+    <audio id="gameover" src="game-over.mp3" preload="auto"></audio>
+
+    <script>
+        // Play the sound when the page loads
+        window.onload = function() {
+            document.getElementById('gameover').play();
+        };
+
+        // Existing script for the potion-form
+        // ...
+    </script>
+</body>
+</html>
+

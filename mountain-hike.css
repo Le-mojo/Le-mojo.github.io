@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('mountain-hike.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will push the main content and the buttons to opposite ends */
+}
+
+.hike-container {
+    text-align: center;
+    width: 100%; /* Ensure it spans the width of the body */
+}
+
+.choice-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%; /* Narrower width for the container */
+    margin-left: auto; /* Center the container */
+    margin-right: auto;
+    margin-top: 20px; /* Space from the top */
+}
+
+.path-options {
+    position: absolute; /* Positioning relative to the bottom of the screen */
+    bottom: 20px; /* Space from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the buttons container horizontally */
+    display: flex;
+    flex-direction: row; /* Align buttons side by side */
+    justify-content: center; /* Center the buttons within the container */
+    width: auto; /* Adjust the width automatically based on content */
+}
+
+.path-options button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px; /* Space between buttons */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    width: auto; /* Allow the width to adjust based on content */
+    /* Remove max-width if you want buttons to size with their content */
+}
+
+.path-options button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}

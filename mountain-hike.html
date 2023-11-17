@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mountain-hike.css">
+    <title>Mountain Hike</title>
+</head>
+<body>
+    <div class="hike-container">
+        <div class="choice-text">
+            <p>Maintenant, tu dois choisir comment affronter cette montée..</p>
+            <p>Dans quelle direction devrais-tu aller?</p>
+        </div>
+        <div class="path-options">
+            <button onclick="choosePath('left')"> ← Aller vers la gauche</button>
+            <button onclick="choosePath('straight')"> ↑ Aller droit devant</button>
+            <button onclick="choosePath('right')"> → Aller vers la droite</button>
+        </div>
+    </div>
+
+    <script>
+        function choosePath(direction) {
+            if (direction === 'left') {
+                // Lead to a dead end or a mini-game
+                window.location.href = 'mountain-end.html';
+            } else if (direction === 'right') {
+                // The correct path
+                window.location.href = 'mountain-end.html';
+            } else {
+                // Another dead end or mini-game
+                window.location.href = 'mountain-peak.html';
+            }
+        }
+    </script>
+</body>
+</html>

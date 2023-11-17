@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.choice-container {
+    background-color: #800020; /* Burgundy-ish color */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.choice-container p {
+    color: #f5f5f5; /* This is a light color that should be visible on the burgundy background */
+    font-size: 1.2em;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #f5f5f5;
+    color: #800020; /* Burgundy-ish text color to match the container */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #9a7b4f;
+}

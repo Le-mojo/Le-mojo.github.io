@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="side-path.css">
+    <title>Side Path Adventure</title>
+</head>
+<body>
+    <div class="text-container">
+       <p>Tu poursuis ton chemin.</p>
+    <p>Trouver un moyen de traverser cette rivière est ton prochain défi.</p>
+    <p>Saute sur les roches dans le bon ordre selon ces indices:</p>
+    <blockquote>
+        "D'abord, cherche l'année précédant celle où nos destins se sont croisés.
+        Ensuite, tourne-toi vers l'année marquée par celui à la teinte d'agrume,
+        Enfin, rappelle-toi de l'année quand l'herbe fut permise, alors qu'autrefois interdite"
+    </blockquote>
+    </div>
+
+    <audio id="stoneSound" src="side-path.mp3" preload="auto"></audio>
+
+    <div class="river-game">
+        <button class="stone" onclick="checkStone(1)">2021</button>
+        <button class="stone" onclick="checkStone(2)">2022</button>
+        <button class="stone" onclick="checkStone(3)">2016</button>
+        <button class="stone" onclick="checkStone(4)">2017</button>
+        <button class="stone" onclick="checkStone(5)">2018</button>
+    </div>
+
+    <script>
+        var correctSequence = [1, 3, 5];
+        var userSequence = [];
+
+        function checkStone(stoneNumber) {
+            // Play the stone sound
+            document.getElementById('stoneSound').play();
+
+            userSequence.push(stoneNumber);
+            if (userSequence.length === correctSequence.length) {
+                if (arraysEqual(userSequence, correctSequence)) {
+                    window.location.href = 'village.html'; // Correct sequence
+                } else {
+                    window.location.href = 'side-path-end.html'; // Incorrect sequence
+                }
+                userSequence = []; // Reset the sequence
+            }
+        }
+
+        function arraysEqual(arr1, arr2) {
+            if (arr1.length !== arr2.length) return false;
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

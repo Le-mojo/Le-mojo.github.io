@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+.heart-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px; /* Increased width */
+    /* Add a max-width if needed, for example: max-width: 30%; */
+}
+
+.balloons-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 150px; /* Increased width */
+    /* Add a max-width if needed, for example: max-width: 30%; */
+}
+
+.message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffc0cb; /* Light pink */
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    max-width: 600px;
+}
+.restart-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0e68c; /* Choose a color that fits the theme */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+    background-color: #ffd700; /* Lighter color on hover */
+}

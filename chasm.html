@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chasm.css">
+    <title>Chasm Challenge</title>
+</head>
+<body>
+    <div class="challenge-text">
+        <p>Pour affronter cette créature, tu dois jouer la bonne chanson.</p>
+        <div class="options">
+            <img src="chasm-song1.png" alt="Song 1" class="song-option" onclick="location.href='chasm-end.html';">
+            <img src="chasm-song2.png" alt="Song 2" class="song-option" onclick="location.href='chasm-end.html';">
+            <img src="chasm-song3.png" alt="Song 3" class="song-option" onclick="location.href='hidden-path.html';">
+        </div>
+    </div>
+
+    <div class="chasm-image-container">
+        <img src="chasm.png" alt="Chasm" class="chasm-image">
+    </div>
+    <audio id="chasmSound" src="chasm.mp3" preload="auto"></audio>
+
+    <script>
+        // Play the sound when the page loads
+        window.onload = function() {
+            document.getElementById('chasmSound').play();
+        };
+
+        // Existing script for the potion-form
+        // ...
+    </script>
+</body>
+</body>
+</html>

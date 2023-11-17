@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('side-path-end.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidepath-end-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.death-message {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Larger text */
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.option-button:hover {
+    background-color: white;
+    color: black;
+}

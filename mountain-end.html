@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game-over.css">
+    <title>Fin de la Montagne</title>
+</head>
+<body>
+    <div class="gameover-container">
+        <img src="game-over.jpg" alt="Game Over" class="gameover-image">
+
+        <p class="death-message">Oh non, tu n'es pas allé dans la bonne direction et tu es mort!</p>
+        <p>(Boy, that escalated quickly)</p>
+
+        <div class="options-container">
+            <a href="mountain-hike.html" class="option-button">Réessayer d'où j'étais</a>
+            <a href="mountain.html" class="option-button">J'ai changé d'idée je veux aller au village</a>
+            <a href="start.html" class="option-button">Je veux tout recommencer</a>
+        </div>
+
+    </div>
+    <audio id="gameover" src="game-over.mp3" preload="auto"></audio>
+
+    <script>
+        // Play the sound when the page loads
+        window.onload = function() {
+            document.getElementById('gameover').play();
+        };
+
+        // Existing script for the potion-form
+        // ...
+    </script>
+    </body>
+    </html>
+    
