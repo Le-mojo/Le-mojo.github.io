@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quête du 34e</title>
+</head>
+<body>
+<audio id="positiveSound" preload="auto">
+    <source src="positivechoice.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="negativeSound" preload="auto">
+    <source src="negativechoice.wav" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
+<div class="container">
+    <h1>Bienvenue à la grande aventure du 34e!</h1>
+    <div class="scroll-box">
+        <p>Bonjour, cher chevalier!</p>
+        <p>Aujourd'hui est une journée spéciale...</p>
+        <p>Oserez-vous ouvrir l’ancien parchemin ?</p>
+        <a href="choice1.html" class="btn" onclick="playPositiveSound(event)">Ouvrir le parchemin</a>
+    </div>
+    <a href="choice2.html" class="btn" onclick="playNegativeSound(event)">Le laisser</a>
+</div>
+    <script>
+function playPositiveSound(event) {
+    const sound = document.getElementById("positiveSound");
+    sound.play();
+    
+    sound.onended = function() {
+        window.location.href = "choice1.html";
+    };
+    
+    event.preventDefault();
+}
+
+function playNegativeSound(event) {
+    const sound = document.getElementById("negativeSound");
+    sound.play();
+    
+    sound.onended = function() {
+        window.location.href = "choice2.html";
+    };
+    
+    event.preventDefault();
+}
+    </script>    
+</body>
+</html>
